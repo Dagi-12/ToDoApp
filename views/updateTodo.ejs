@@ -1,34 +1,33 @@
 <%- include("partials/header") %>
-    <div class="table-container">
-      <h2 class="tofo-title">update todo</h2>
-      <div>
-        <a class="btn" href="/">Back</a>
-        <form action="" method="">
-          <div class="update-todo">
-            <div class="form-group">
-              <label for="title" class="text-light">Title</label>
-              <input
-                type="text"
-                name="title"
-                value=""
-                placeholder="Type Todo here"
-              />
-            </div>
-            <div class="form-group">
-              <label for="desc" class="text-light">Description</label>
-              <input
-                type="text"
-                name="desc"
-                value=""
-                placeholder="type Description here"
-              />
-            </div>
-            <div class="form-group">
-              <button type="submit" class="btn">Save</button>
-            </div>
-          </div>
-        </form>
+<div class="table-container">
+  <h2 class="tofo-title">update todo</h2>
+  <div>
+    <a class="btn" href="/">Back</a>
+    <form action="/update-todo/<%= todoo._id %>" method="post">
+      <div class="update-todo">
+        <div class="form-group">
+          <label for="title" class="text-light">Title</label>
+          <input
+            type="text"
+            name="title"
+            value="<%= todoo.title%>"
+            placeholder="Type Todo here"
+          />
+        </div>
+        <div class="form-group">
+          <label for="desc" class="text-light">Description</label>
+          <input
+            type="text"
+            name="desc"
+            value="<%= todoo.desc%>"
+            placeholder="type Description here"
+          />
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn">Save</button>
+        </div>
       </div>
-    </div>
+    </form>
+  </div>
+</div>
 <%- include("partials/footer") %>
-
